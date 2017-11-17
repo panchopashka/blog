@@ -1,0 +1,16 @@
+F:\My_projects\svsup\Adminka\Blog.Core\bin\Debug\Blog.Core.dll.config
+F:\My_projects\svsup\Adminka\Blog.Core\bin\Debug\Blog.Core.dll
+F:\My_projects\svsup\Adminka\Blog.Core\bin\Debug\Blog.Core.pdb
+F:\My_projects\svsup\Adminka\Blog.Core\bin\Debug\EntityFramework.dll
+F:\My_projects\svsup\Adminka\Blog.Core\bin\Debug\EntityFramework.SqlServer.dll
+F:\My_projects\svsup\Adminka\Blog.Core\bin\Debug\EntityFramework.xml
+F:\My_projects\svsup\Adminka\Blog.Core\bin\Debug\EntityFramework.SqlServer.xml
+F:\My_projects\svsup\Adminka\Blog.Core\obj\Debug\Blog.Core.csproj.CoreCompileInputs.cache
+F:\My_projects\svsup\Adminka\Blog.Core\obj\Debug\Blog.Core.dll
+F:\My_projects\svsup\Adminka\Blog.Core\obj\Debug\Blog.Core.pdb
+F:\My_projects\svsup\Adminka\Blog.Core\obj\Debug\Blog.Core.csprojResolveAssemblyReference.cache
+F:\My_projects\svsup\Adminka\Blog.Core\obj\Debug\Blog.Core.Migrations.Initial.resources
+F:\My_projects\svsup\Adminka\Blog.Core\obj\Debug\Blog.Core.csproj.GenerateResource.Cache
+F:\My_projects\svsup\Adminka\Blog.Core\bin\Debug\Newtonsoft.Json.dll
+F:\My_projects\svsup\Adminka\Blog.Core\bin\Debug\Newtonsoft.Json.xml
+F:\My_projects\svsup\Adminka\Blog.Core\obj\Debug\Blog.Core.Migrations.two.resources

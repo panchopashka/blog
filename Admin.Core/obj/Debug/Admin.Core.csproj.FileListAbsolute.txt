@@ -1,0 +1,13 @@
+F:\My_projects\svsup\Adminka\Admin.Core\bin\Debug\Admin.Core.dll.config
+F:\My_projects\svsup\Adminka\Admin.Core\bin\Debug\Admin.Core.dll
+F:\My_projects\svsup\Adminka\Admin.Core\bin\Debug\Admin.Core.pdb
+F:\My_projects\svsup\Adminka\Admin.Core\bin\Debug\EntityFramework.dll
+F:\My_projects\svsup\Adminka\Admin.Core\bin\Debug\EntityFramework.SqlServer.dll
+F:\My_projects\svsup\Adminka\Admin.Core\bin\Debug\EntityFramework.xml
+F:\My_projects\svsup\Adminka\Admin.Core\bin\Debug\EntityFramework.SqlServer.xml
+F:\My_projects\svsup\Adminka\Admin.Core\obj\Debug\Admin.Core.csproj.CoreCompileInputs.cache
+F:\My_projects\svsup\Adminka\Admin.Core\obj\Debug\Admin.Core.dll
+F:\My_projects\svsup\Adminka\Admin.Core\obj\Debug\Admin.Core.pdb
+F:\My_projects\svsup\Adminka\Admin.Core\obj\Debug\Admin.Core.csprojResolveAssemblyReference.cache
+F:\My_projects\svsup\Adminka\Admin.Core\obj\Debug\Admin.Core.Migrations.Initial.resources
+F:\My_projects\svsup\Adminka\Admin.Core\obj\Debug\Admin.Core.csproj.GenerateResource.Cache
