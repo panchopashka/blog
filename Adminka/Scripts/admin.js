@@ -222,7 +222,7 @@
             url: '/Admin/Posts',
             datatype: 'json',
             mtype: 'GET',
-            height: 'auto',
+            height: 1000,
             toppager: true,
 
             colNames: colNames,
@@ -375,7 +375,7 @@
             url: '/Admin/Categories',
             datatype: 'json',
             mtype: 'GET',
-            height: 'auto',
+            height: 1000,
             toppager: true,
             colNames: colNames,
             colModel: columns,
@@ -391,7 +391,7 @@
         });
 
         var editOptions = {
-            url: '/Admin/EditCategory',
+            url: '/Admin/EditCategoryAsync',
             width: 400,
             editCaption: 'Edit Category',
             processData: "Saving...",
@@ -410,7 +410,7 @@
         };
 
         var addOptions = {
-            url: '/Admin/AddCategory',
+            url: '/Admin/AddCategoryAsync',
             width: 400,
             addCaption: 'Add Category',
             processData: "Saving...",
@@ -429,7 +429,7 @@
         };
 
         var deleteOptions = {
-            url: '/Admin/DeleteCategory',
+            url: '/Admin/DeleteCategoryAsync',
             caption: 'Delete Category',
             processData: "Saving...",
             width: 500,
@@ -443,8 +443,7 @@
             cloneToTop: true,
             search: false
         },
-
-            editOptions, addOptions, deleteOptions);
+        editOptions, addOptions, deleteOptions);
     };
 
     //************************* TAGS GRID
@@ -529,7 +528,7 @@
         });
 
         var editOptions = {
-            url: '/Admin/EditTag',
+            url: '/Admin/EditTagAsync',
             editCaption: 'Edit Tag',
             processData: "Saving...",
             closeAfterEdit: true,
@@ -548,7 +547,7 @@
         };
 
         var addOptions = {
-            url: '/Admin/AddTag',
+            url: '/Admin/AddTagAsync',
             addCaption: 'Add Tag',
             processData: "Saving...",
             closeAfterAdd: true,
@@ -567,7 +566,7 @@
         };
 
         var deleteOptions = {
-            url: '/Admin/DeleteTag',
+            url: '/Admin/DeleteTagAsync',
             caption: 'Delete Tag',
             processData: "Saving...",
             width: 500,
@@ -579,7 +578,8 @@
         // configuring the navigation toolbar.
         $(gridName).jqGrid('navGrid', pagerName, {
             cloneToTop: true,
-            search: false
+            search: false,
+            height:1000
         },
 
             editOptions, addOptions, deleteOptions);
@@ -623,7 +623,34 @@
                 fn(gridName, pagerName);
                 ui.tab.isLoaded = true;
             }
+        },
+
+        activate: function (event, ui) {
+            var gdMgr = JustBlog.GridManager,
+                fn, gridName, pagerName;
+
+            switch (ui.newPanel[0].id) {
+                case "tab-posts":
+                    fn = gdMgr.postsGrid;
+                    gridName = "#tablePosts";
+                    pagerName = "#pagerPosts";
+                    break;
+                case "tab-cats":
+                    fn = gdMgr.categoriesGrid;
+                    gridName = "#tableCats";
+                    pagerName = "#pagerCats";
+                    break;
+                case "tab-tags":
+                    fn = gdMgr.tagsGrid;
+                    gridName = "#tableTags";
+                    pagerName = "#pagerTags";
+                    break;
+            };
+
+            fn(gridName, pagerName);
         }
+
+
     });
 });
 

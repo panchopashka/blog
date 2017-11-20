@@ -294,6 +294,52 @@ namespace Blog.Core.Stores
             return _dbContext.Categories.ToListAsync();
         }
 
+        public Task<int> AddCategoryAsync(Category category)
+        {
+            _dbContext.Categories.Add(category);
+            return _dbContext.SaveChangesAsync();
+        }
+
+        public async Task EditCategoryAsync(Category category)
+        {
+            var editCategory = await _dbContext.Categories.FirstOrDefaultAsync(c => c.Id == category.Id);
+            _dbContext.Categories.Remove(editCategory);
+
+            _dbContext.Categories.Add(category);
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task DeleteCategoryAsync(int id)
+        {
+            var delCategory = await _dbContext.Categories.FirstOrDefaultAsync(c => c.Id == id);
+            _dbContext.Categories.Remove(delCategory);
+
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public Task<int> AddTagAsync(Tag tag)
+        {
+            _dbContext.Tags.Add(tag);
+            return _dbContext.SaveChangesAsync();
+        }
+
+        public async Task EditTagAsync(Tag tag)
+        {
+            var editTag = await _dbContext.Tags.FirstOrDefaultAsync(t => t.Id == tag.Id);
+            _dbContext.Tags.Remove(editTag);
+
+            _dbContext.Tags.Add(tag);
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task DeleteTagAsync(int id)
+        {
+            var delTag = await _dbContext.Tags.FirstOrDefaultAsync(t => t.Id == id);
+            _dbContext.Tags.Remove(delTag);
+
+            await _dbContext.SaveChangesAsync();
+        }
+
         public List<Tag> Tags()
         {
             return _dbContext.Tags.OrderBy(p => p.Name).ToList();

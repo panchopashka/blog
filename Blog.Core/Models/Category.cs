@@ -10,13 +10,13 @@ namespace Blog.Core.Models
         public virtual int Id
         { get; set; }
 
-        [Required]
-        [MaxLength(50)]
+        [Required(ErrorMessage = "Name: Field is required")]
+        [MaxLength(50, ErrorMessage = "Name: Length should not exceed 50 characters")]
         public virtual string Name
         { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(50, ErrorMessage = "UrlSlug: Length should not exceed 50 characters")]
         public virtual string UrlSlug
         { get; set; }
 

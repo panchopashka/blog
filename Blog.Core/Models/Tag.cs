@@ -10,12 +10,12 @@ namespace Blog.Core.Models
         public virtual int Id
         { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Name: Field is required")]
         [MaxLength(50)]
         public virtual string Name
         { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "UrlSlug: Field is required")]
         [MaxLength(50)]
         public virtual string UrlSlug
         { get; set; }

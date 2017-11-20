@@ -18,6 +18,14 @@ namespace Blog.Core.Stores
         Task EditPostAsync(Post post);
         Task DeletePostAsync(int id);
 
+        Task<int> AddCategoryAsync(Category category);
+        Task EditCategoryAsync(Category category);
+        Task DeleteCategoryAsync(int id);
+
+        Task<int> AddTagAsync(Tag tag);
+        Task EditTagAsync(Tag tag);
+        Task DeleteTagAsync(int id);
+
         Task<List<Post>> PostsForCategoryAsync(string categorySlug, int pageNo, int pageSize);
         Task<int> TotalPostsForCategoryAsync(string categorySlug);
         Task<Category> CategoryAsync(string categorySlug);
