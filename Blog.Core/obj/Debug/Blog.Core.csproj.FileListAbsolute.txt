@@ -14,3 +14,4 @@ F:\My_projects\svsup\Adminka\Blog.Core\obj\Debug\Blog.Core.csproj.GenerateResour
 F:\My_projects\svsup\Adminka\Blog.Core\bin\Debug\Newtonsoft.Json.dll
 F:\My_projects\svsup\Adminka\Blog.Core\bin\Debug\Newtonsoft.Json.xml
 F:\My_projects\svsup\Adminka\Blog.Core\obj\Debug\Blog.Core.Migrations.two.resources
+F:\My_projects\svsup\Adminka\Blog.Core\obj\Debug\Blog.Core.Migrations.newfield.resources

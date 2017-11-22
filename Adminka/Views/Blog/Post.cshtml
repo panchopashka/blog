@@ -17,11 +17,11 @@
             <div class="row">
 
                 <div class="post-category">
-                    <span>Category:</span> @Html.CategoryLink(Model.Category)
+                    <span>Категория:</span> @Html.CategoryLink(Model.Category)
                 </div>
 
                 <div class="post-tags">
-                    <span>Tags:</span> @Helpers.Tags(Html, Model.Tags)
+                    <span>Теги:</span> @Helpers.Tags(Html, Model.Tags)
                 </div>
 
                 <div class="posted-date">
@@ -32,6 +32,8 @@
         </div>
 
         <div class="post-body">
+
+            <div ><img src="@Model.TitleImage" class="post-titleImage"></div>
             @Html.Raw(Model.Description)
         </div>
 

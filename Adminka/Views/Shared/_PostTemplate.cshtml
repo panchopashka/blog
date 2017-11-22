@@ -15,12 +15,12 @@
 
             <!--Category-->
             <div class="post-category">
-                <span>Category: </span>@Html.CategoryLink(Model.Category)
+                <span>Категория: </span>@Html.CategoryLink(Model.Category)
             </div>
 
             <!--Tags-->
             <div class="post-tags">
-                <span>Tags:</span>@Helpers.Tags(Html, Model.Tags)
+                <span>Теги:</span>@Helpers.Tags(Html, Model.Tags)
             </div>
 
             <!--Posted date-->
@@ -32,13 +32,16 @@
 
     </div>
 
+    <div><img src="@Model.TitleImage" class="post-titleImage"></div>
+
+
     <!--Short Description-->
     <div class="post-body">
         @Html.Raw(Model.ShortDescription)
     </div>
 
     <div class="post-foot">
-        @Html.ActionLink("continue...", "post", "blog",
+        @Html.ActionLink("продолжение...", "post", "blog",
         new
         {
             year = Model.PostedOn.Year,
@@ -46,7 +49,7 @@
             day = Model.PostedOn.Day,
             title = Model.UrlSlug
         },
-        new { title = "continue..." }
+        new { title = "продолжение..." }
     )
     </div>
 </div>

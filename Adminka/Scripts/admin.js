@@ -9,13 +9,18 @@
 
         //*** Event handlers
         var afterclickPgButtons = function (whichbutton, formid, rowid) {
+            console.log("dd");
             tinyMCE.get("ShortDescription").setContent(formid[0]["ShortDescription"].value);
+            console.log(formid[0]["Description"]);
             tinyMCE.get("Description").setContent(formid[0]["Description"].value);
         };
 
         var afterShowForm = function (form) {
-            tinyMCE.execCommand('mceAddControl', false, "ShortDescription");
-            tinyMCE.execCommand('mceAddControl', false, "Description");
+            console.log(form);
+            tinyMCE.execCommand('mceAddControl', true, "ShortDescription");
+            tinyMCE.execCommand('mceAddControl', true, "Description");
+            tinyMCE.execCommand('mceReplaceContent', true, "ShortDescription");
+            tinyMCE.execCommand('mceReplaceContent', true, "Description");
         };
 
         var onClose = function (form) {
@@ -36,6 +41,7 @@
         var colNames = [
             'Id',
             'Title',
+            'TitleImage',
             'Short Description',
             'Description',
             'Category',
@@ -76,13 +82,29 @@
         });
 
         columns.push({
+            name: 'TitleImage',
+            width: 250,
+            sortable: false,
+            editable: true,
+            edittype: 'textarea',
+            editoptions: {
+                rows: "2",
+                cols: "40",
+                maxlength: 1000
+            },
+            editrules: {
+                required: true
+            }
+        });
+
+        columns.push({
             name: 'ShortDescription',
             index: 'ShortDescription',
             width: 250,
             editable: true,
             sortable: false,
             hidden: true,
-            edittype: 'textarea',
+            edittype: 'div',
             editoptions: {
                 rows: "10",
                 cols: "100"
@@ -105,7 +127,7 @@
             editable: true,
             sortable: false,
             hidden: true,
-            edittype: 'textarea',
+            edittype: 'div',
             editoptions: {
                 rows: "40",
                 cols: "100"

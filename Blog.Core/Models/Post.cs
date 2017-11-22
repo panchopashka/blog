@@ -11,6 +11,11 @@ namespace Blog.Core.Models
         { get; set; }
 
         [Required(ErrorMessage = "Title: Field is required")]
+        [MaxLength(500)]
+        public virtual string TitleImage
+        { get; set; }
+
+        [Required(ErrorMessage = "Title: Field is required")]
         [MaxLength(5000)]
         public virtual string Title
         { get; set; }
